@@ -1,5 +1,5 @@
 # rzctl
-Control your mouse using razer synapse
+Control your mouse and keyboard using razer synapse
 
 # Compile in x64
 Not tested for x86
