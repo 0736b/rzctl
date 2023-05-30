@@ -50,7 +50,7 @@ namespace rzctl {
 	/*
 	* finds the symbolic link that contains name RZCONTROL and opens a handle to the respective device
 	*/
-	DllExport bool init();
+	extern "C" DllExport bool init();
 
 	/*
 	* if going from point, x and y will be the offset from current mouse position
@@ -58,12 +58,12 @@ namespace rzctl {
 	* if using multiple monitors the input values remain the same, but outcome different, i just don't recommend bothering with this bs
 	* note: x and/or y can not be 0 unless going from start point	
 	*/
-	DllExport void mouse_move(int x, int y, bool from_start_point = true);
-	DllExport void mouse_click(int click_mask);
+	extern "C" DllExport void mouse_move(int x, int y, bool from_start_point = true);
+	extern "C" DllExport void mouse_click(int click_mask);
 	/*
 	* Refer to Scan Code Table in https://download.microsoft.com/download/1/6/1/161ba512-40e2-4cc9-843a-923143f3456c/scancode.doc
 	*/
-	DllExport void keyboard_input(short scan_code, KEYBOARD_INPUT_TYPE up_down);
+	extern "C" DllExport void keyboard_input(short scan_code, KEYBOARD_INPUT_TYPE up_down);
 
 	/*
 	* communicates to the device
